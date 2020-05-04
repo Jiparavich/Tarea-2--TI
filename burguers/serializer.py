@@ -23,7 +23,7 @@ class CustomIngredienteSerializer(IngredienteSerializer):
     ##ALTERAMOS REPRESTANCIÓN PARA QUE SIGA EL FORMATO DE LA API, E.G PATH
     def to_representation(self, instance):
         data = super(IngredienteSerializer, self).to_representation(instance)
-        dir = "http://127.0.0.1:8000/ingrediente/{}".format(str(data['id']))
+        dir = "http://tarea2-taller-de-integracion.herokuapp.com/ingrediente/{}".format(str(data['id']))
         return {'path': dir}
 
 

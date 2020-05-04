@@ -25,7 +25,7 @@ SECRET_KEY = 'sm*lc$w!rpo66gplp@bg=_iygetmd_c5i2v7hk)54-(my(%e0d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tarea2-taller-de-integracion.herokuapp.com']
 
 
 # Application definition
@@ -127,3 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+import dj_database_url
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
